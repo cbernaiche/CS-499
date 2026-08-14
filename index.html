@@ -1,45 +1,202 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>CS-499 Portfolio</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f8;
+            color: #222;
+            line-height: 1.7;
+        }
+
+        header {
+            background-color: #00244d;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 52px;
+        }
+
+        header p {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background-color: white;
+            margin-bottom: 40px;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            color: #00244d;
+            font-size: 32px;
+            border-bottom: 3px solid #f2b134;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #00244d;
+            font-size: 24px;
+            margin-top: 30px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        video {
+            display: block;
+            width: 100%;
+            max-width: 900px;
+            margin: 25px auto;
+            border-radius: 10px;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            max-width: 900px;
+            margin: 25px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        footer {
+            background-color: #00244d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 700px) {
+            header h1 {
+                font-size: 36px;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 26px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>CS-499 Computer Science Portfolio</h1>
+    <header>
+        <h1>Southern New Hampshire University</h1>
+        <p>CS-499 Computer Science Capstone Portfolio</p>
+    </header>
 
-    <h2>About Me</h2>
+    <main>
 
-    <p>
-        Hello everyone, my name is Chris Bernaiche and I am currently
-        a Computer Science student at SNHU.
-    </p>
+        <section>
+            <h2>About My Capstone Project</h2>
 
-    <hr>
+            <p>
+                Hello everyone, my name is Chris Bernaiche and I am currently a
+                computer science student at SNHU.
+            </p>
 
-    <h2>Liar's Dice Game</h2>
+            <p>
+                For this capstone class, I had to take a previous project and enhance
+                it in three ways: software design and engineering, algorithms and
+                data structures, and databases.
+            </p>
 
-    <p>
-        For this project, I developed a Liar's Dice game using C++.
-        The project includes game logic, player statistics, and an
-        SQLite database used to store game data.
-    </p>
+            <p>
+                The project I chose was a Liar's Dice game that I had made in a simple
+                form in a previous class. When I first developed this game, it was
+                made in Visual Studio Code because I was tasked with creating simple
+                code with minimal debugging.
+            </p>
 
-    <h3>Project Screenshots</h3>
+            <p>
+                To start my enhancements on this game, I decided to move it to Visual
+                Studio because it provided more tools that would help me make the
+                project more advanced.
+            </p>
 
-    <img
-        src="Screenshot 2026-08-14 120239.png"
-        alt="Liar's Dice Project Screenshot"
-        style="max-width: 800px; width: 100%; height: auto;"
-    >
+            <p>
+                I added more algorithms to make the game have five rounds rather than
+                just one round. I also added a way to have the rules appear at the
+                beginning of the game. Lastly, I added a database that stores player
+                statistics and awards.
+            </p>
+        </section>
 
-    <br><br>
+        <section>
+            <h2>Video Demonstration</h2>
 
-    <img
-        src="Screenshot 2026-08-14 120253.png"
-        alt="Liar's Dice Database Screenshot"
-        style="max-width: 800px; width: 100%; height: auto;"
-    >
+            <video controls>
+                <source src="CS 499 Final Project Video Demonstration.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <section>
+            <h2>Database</h2>
+
+            <p>
+                Within the database, I created two main sections: player statistics
+                and inventory. The player statistics section stores information about
+                each player's performance, including the amount of wins each player has.
+            </p>
+
+            <h3>Player Statistics</h3>
+
+            <img
+                src="Screenshot 2026-08-14 120239.png"
+                alt="Liar's Dice Player Statistics Database"
+            >
+
+            <p>
+                The inventory section holds the player awards. Players can earn awards
+                for getting their first win, building win streaks, reaching win
+                milestones such as 10 wins, 20 wins, or more, and reaching bluff
+                milestones.
+            </p>
+
+            <h3>Player Awards and Inventory</h3>
+
+            <img
+                src="Screenshot 2026-08-14 120253.png"
+                alt="Liar's Dice Inventory and Awards Database"
+            >
+        </section>
+
+    </main>
+
+    <footer>
+        <p>CS-499 Computer Science Capstone Portfolio</p>
+    </footer>
 
 </body>
 </html>
