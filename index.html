@@ -4,101 +4,234 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CS-499 Portfolio</title>
+    <title>CS-499 Portfolio | Chris Bernaiche</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f6f8;
-            color: #222;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: #0d1117;
+            color: #d6d9df;
             line-height: 1.7;
         }
 
-        header {
-            background-color: #00244d;
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
+        /* NAVIGATION */
+        nav {
+            background-color: #161b22;
+            border-bottom: 1px solid #30363d;
+            padding: 15px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 52px;
-        }
-
-        header p {
-            font-size: 20px;
-            margin-top: 10px;
-        }
-
-        main {
+        .nav-container {
             max-width: 1100px;
-            margin: 40px auto;
-            padding: 0 20px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-title {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: #b9c0ca;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #58a6ff;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 20px;
+            background-color: #0d1117;
+            border-bottom: 1px solid #21262d;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero-label {
+            color: #58a6ff;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            color: #ffffff;
+            font-size: 58px;
+            margin: 15px 0;
+            line-height: 1.15;
+        }
+
+        .hero h2 {
+            color: #8b949e;
+            font-size: 25px;
+            font-weight: 400;
+            border: none;
+            margin: 0;
+        }
+
+        /* MAIN CONTENT */
+        main {
+            max-width: 1050px;
+            margin: auto;
+            padding: 70px 25px;
         }
 
         section {
-            background-color: white;
-            margin-bottom: 40px;
-            padding: 35px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 100px;
+            scroll-margin-top: 90px;
+        }
+
+        .section-label {
+            color: #58a6ff;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            margin-bottom: 8px;
         }
 
         h2 {
-            color: #00244d;
-            font-size: 32px;
-            border-bottom: 3px solid #f2b134;
-            padding-bottom: 10px;
+            color: white;
+            font-size: 36px;
+            margin-top: 0;
+            margin-bottom: 30px;
         }
 
         h3 {
-            color: #00244d;
+            color: #ffffff;
             font-size: 24px;
-            margin-top: 30px;
+            margin-top: 45px;
         }
 
         p {
             font-size: 18px;
+            color: #b7bec8;
+            margin-bottom: 22px;
+        }
+
+        /* PROJECT INFORMATION */
+        .project-info {
+            border-left: 4px solid #58a6ff;
+            padding-left: 25px;
+        }
+
+        /* VIDEO */
+        .media-container {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
         }
 
         video {
             display: block;
             width: 100%;
-            max-width: 900px;
-            margin: 25px auto;
-            border-radius: 10px;
+            border-radius: 5px;
+        }
+
+        /* DATABASE SCREENSHOTS */
+        .database-item {
+            margin-top: 50px;
         }
 
         img {
             display: block;
             width: 100%;
-            max-width: 900px;
-            margin: 25px auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            margin-top: 20px;
+            border: 1px solid #30363d;
+            border-radius: 6px;
         }
 
+        /* ENHANCEMENT TAGS */
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 30px 0;
+        }
+
+        .tag {
+            background-color: #13233a;
+            color: #58a6ff;
+            padding: 7px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        /* DIVIDER */
+        .divider {
+            height: 1px;
+            background-color: #30363d;
+            margin: 70px 0;
+        }
+
+        /* FOOTER */
         footer {
-            background-color: #00244d;
-            color: white;
             text-align: center;
-            padding: 20px;
-            margin-top: 40px;
+            border-top: 1px solid #30363d;
+            padding: 35px 20px;
+            color: #8b949e;
+            background-color: #0d1117;
         }
 
+        footer p {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        /* MOBILE */
         @media (max-width: 700px) {
-            header h1 {
-                font-size: 36px;
+            .hero {
+                min-height: 400px;
             }
 
-            section {
-                padding: 20px;
+            .hero h1 {
+                font-size: 39px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            main {
+                padding: 50px 20px;
             }
 
             h2 {
-                font-size: 26px;
+                font-size: 30px;
             }
 
             p {
@@ -110,15 +243,49 @@
 
 <body>
 
-    <header>
-        <h1>Southern New Hampshire University</h1>
-        <p>CS-499 Computer Science Capstone Portfolio</p>
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-title">Chris Bernaiche</div>
+
+            <div class="nav-links">
+                <a href="#reflection">Reflection</a>
+                <a href="#project">Project</a>
+                <a href="#video">Video</a>
+                <a href="#database">Database</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- HEADER -->
+    <header class="hero">
+        <div class="hero-content">
+
+            <div class="hero-label">
+                Computer Science
+            </div>
+
+            <h1>Southern New Hampshire University</h1>
+
+            <h2>
+                CS-499 Computer Science Capstone Portfolio
+            </h2>
+
+        </div>
     </header>
+
 
     <main>
 
-        <section>
-            <h2>CS-499 Portfolio Reflection</h2>
+        <!-- REFLECTION -->
+        <section id="reflection">
+
+            <div class="section-label">
+                Portfolio Reflection
+            </div>
+
+            <h2>My Experience in CS-499</h2>
 
             <p>
                 Throughout this class, I have strengthened many of my coding skills.
@@ -137,87 +304,162 @@
                 I can then take these skills and use them to create a bigger portfolio
                 containing many more projects for future employers.
             </p>
+
         </section>
 
-        <section>
-            <h2>About My Liar's Dice Capstone Project</h2>
 
-            <p>
-                Hello everyone, my name is Chris Bernaiche and I am currently a
-                computer science student at SNHU.
-            </p>
+        <div class="divider"></div>
 
-            <p>
-                For this capstone class, I had to take a previous project and enhance
-                it in three ways: software design and engineering, algorithms and
-                data structures, and databases.
-            </p>
 
-            <p>
-                The project I chose was a Liar's Dice game that I had made in a simple
-                form in a previous class. When I first developed this game, it was
-                made in Visual Studio Code because I was tasked with creating simple
-                code with minimal debugging.
-            </p>
+        <!-- LIAR'S DICE PROJECT -->
+        <section id="project">
 
-            <p>
-                To start my enhancements on this game, I decided to move it to Visual
-                Studio because it provided more tools that would help me make the
-                project more advanced.
-            </p>
+            <div class="section-label">
+                Capstone Project
+            </div>
 
-            <p>
-                I added more algorithms to make the game have five rounds rather than
-                just one round. I also added a way to have the rules appear at the
-                beginning of the game. Lastly, I added a database that stores player
-                statistics and awards.
-            </p>
+            <h2>Liar's Dice</h2>
+
+            <div class="tags">
+                <span class="tag">C++</span>
+                <span class="tag">Visual Studio</span>
+                <span class="tag">SQLite</span>
+                <span class="tag">Algorithms</span>
+                <span class="tag">Database</span>
+            </div>
+
+            <div class="project-info">
+
+                <p>
+                    Hello everyone, my name is Chris Bernaiche and I am currently a
+                    computer science student at SNHU.
+                </p>
+
+                <p>
+                    For this capstone class, I had to take a previous project and
+                    enhance it in three ways: software design and engineering,
+                    algorithms and data structures, and databases.
+                </p>
+
+                <p>
+                    The project I chose was a Liar's Dice game that I had made in a
+                    simple form in a previous class. When I first developed this game,
+                    it was made in Visual Studio Code because I was tasked with
+                    creating simple code with minimal debugging.
+                </p>
+
+                <p>
+                    To start my enhancements on this game, I decided to move it to
+                    Visual Studio because it provided more tools that would help me
+                    make the project more advanced.
+                </p>
+
+                <p>
+                    I added more algorithms to make the game have five rounds rather
+                    than just one round. I also added a way to have the rules appear
+                    at the beginning of the game. Lastly, I added a database that
+                    stores player statistics and awards.
+                </p>
+
+            </div>
+
         </section>
 
-        <section>
+
+        <div class="divider"></div>
+
+
+        <!-- VIDEO -->
+        <section id="video">
+
+            <div class="section-label">
+                Demonstration
+            </div>
+
             <h2>Video Demonstration</h2>
 
-            <video controls>
-                <source src="CS 499 Final Project Video Demonstration.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <p>
+                The following video demonstrates the enhanced version of my
+                Liar's Dice project.
+            </p>
+
+            <div class="media-container">
+
+                <video controls>
+                    <source
+                        src="CS 499 Final Project Video Demonstration.mp4"
+                        type="video/mp4">
+
+                    Your browser does not support the video tag.
+                </video>
+
+            </div>
+
         </section>
 
-        <section>
+
+        <div class="divider"></div>
+
+
+        <!-- DATABASE -->
+        <section id="database">
+
+            <div class="section-label">
+                Database Enhancement
+            </div>
+
             <h2>Database</h2>
 
             <p>
                 Within the database, I created two main sections: player statistics
-                and inventory. The player statistics section stores information about
-                each player's performance, including the amount of wins each player has.
+                and inventory. The player statistics section stores information
+                about each player's performance, including the amount of wins each
+                player has.
             </p>
 
-            <h3>Player Statistics</h3>
 
-            <img
-                src="Screenshot 2026-08-14 120239.png"
-                alt="Liar's Dice Player Statistics Database"
-            >
+            <div class="database-item">
 
-            <p>
-                The inventory section holds the player awards. Players can earn awards
-                for getting their first win, building win streaks, reaching win
-                milestones such as 10 wins, 20 wins, or more, and reaching bluff
-                milestones.
-            </p>
+                <h3>Player Statistics</h3>
 
-            <h3>Player Awards and Inventory</h3>
+                <p>
+                    The player statistics table keeps track of player information
+                    and the number of wins each player has earned.
+                </p>
 
-            <img
-                src="Screenshot 2026-08-14 120253.png"
-                alt="Liar's Dice Inventory and Awards Database"
-            >
+                <img
+                    src="Screenshot 2026-08-14 120239.png"
+                    alt="Liar's Dice Player Statistics Database">
+
+            </div>
+
+
+            <div class="database-item">
+
+                <h3>Player Awards & Inventory</h3>
+
+                <p>
+                    Players can earn awards for getting their first win, building
+                    win streaks, reaching win milestones such as 10 wins, 20 wins,
+                    or more, and reaching bluff milestones. These rewards are stored
+                    within the inventory section of the database.
+                </p>
+
+                <img
+                    src="Screenshot 2026-08-14 120253.png"
+                    alt="Liar's Dice Player Awards and Inventory Database">
+
+            </div>
+
         </section>
 
     </main>
 
+
     <footer>
-        <p>CS-499 Computer Science Capstone Portfolio</p>
+        <p>
+            CS-499 Computer Science Capstone Portfolio | Southern New Hampshire University
+        </p>
     </footer>
 
 </body>
